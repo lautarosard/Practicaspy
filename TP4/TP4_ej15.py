@@ -1,9 +1,4 @@
-import sys
-sys.path.append("D:\Fundamentos de informatica\TP3")
-from TP3.TP3_9 import calculo_nuevo_precio
-from TP3.TP3_10 import calculo_transporte
-from TP3.TP3_12 import calculo_litros
-from TP3.TP3_15 import calculo_dosis
+from Funciones import *
 
 #Funciones
 def funcidofun(a):
@@ -33,10 +28,5 @@ def funcidofun(a):
     else:
         print("Opción no disponible")
 #programa principal
-print("*"*50)
-print("Bienvenido al programa con menu de opciones")
-op=int(input("Elija una opcion del siguiente menu, ingresando del 1 al 4"))
-while op<0:
-    print("1- Calculo nuevo precio ","\n2- Calculo transporte",
-    "\n3- Calculo litros","\n4- Calculo dosis")
-    funcidofun(op)
+print("Hola bienvenido/a a este programa, seleccione una de las opciones")
+print("1-Calcular precio","\n2-Calcular transporte","\n3-Calcular litros","\n4-Calcular dosis",)

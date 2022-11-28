@@ -29,8 +29,10 @@ def actstock(lis):
     
 def caducidad(list,cad):
     piojab=[]
+    fechi=0
     for co in list:
-        if co[3]>cad:
+        fechi=co[3]
+        if fechi>cad:
             piojab.append(co)
     return piojab
 
@@ -40,7 +42,7 @@ print("Bienvenido a la farmacia")
 print('*'*25)
 print('rellene los datos de el/los medicamento/s y del/los jarabe/s')
 print('*'*55)
-#PASTI
+#Patillas
 med_pastillas=[]
 codpas=str(input("Código del medicamento: "))
 while codpas!="AAA":
@@ -56,7 +58,7 @@ while codpas!="AAA":
     print('*'*55)
     print('Para parar la carga de datos ingrese "AAA"')
     codpas=str(input("Código del medicamento: "))
-#Codeína
+#Jarabes
 med_jarabe=[]
 print('*'*55)
 codjara=str(input("Código del jarabe: "))

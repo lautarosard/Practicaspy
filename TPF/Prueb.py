@@ -1,8 +1,17 @@
 from datetime import datetime
-consulta=datetime.now().strftime('%d-%m-%Y')
+piojab=[]
+consulta=datetime.now().strftime('%Y/%m/%d')
 print(consulta)
 vencij=str(input('Ingrese fecha de vencimiento "aaaa/mm/dd: '))
-fechaj= datetime.strptime(vencij, '%Y/%m/%d').strftime('%d-%m-%Y')
-print (fechaj)
-if consulta>fechaj:
-    print(consulta,"ws mayor")
+while vencij!="05/05/05":
+    fechaj= datetime.strptime(vencij, '%Y/%m/%d').strftime('%Y/%m/%d')
+    piojab.append(fechaj)
+    print (piojab)
+    for co in piojab:
+        fechi=co[3]
+        if fechi>consulta:
+            piojab.append(co)
+    vencij=str(input('Ingrese fecha de vencimiento "aaaa/mm/dd: '))
+print(piojab,"ws mayor")
+    
+
